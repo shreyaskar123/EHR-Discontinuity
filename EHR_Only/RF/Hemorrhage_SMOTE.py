@@ -27,39 +27,40 @@ validation_set_low = validation_set[validation_set.Cal_MPEC_R0 < fifty_perc_EHR_
 
 
 predictor_variable = [
-'Co_CAD_RC0', 'Co_Embolism_RC0', 'Co_DVT_RC0', 'Co_PE_RC0', 'Co_AFib_RC0',
-        'Co_Hypertension_RC0', 'Co_Hyperlipidemia_RC0', 'Co_Atherosclerosis_RC0',
-        'Co_HF_RC0', 'Co_HemoStroke_RC0', 'Co_IscheStroke_RC0', 'Co_OthStroke_RC0',
-        'Co_TIA_RC0', 'Co_COPD_RC0', 'Co_Asthma_RC0', 'Co_Pneumonia_RC0', 'Co_Alcoholabuse_RC0',
-        'Co_Drugabuse_RC0', 'Co_Epilepsy_RC0', 'Co_Cancer_RC0', 'Co_MorbidObesity_RC0',
-        'Co_Dementia_RC0', 'Co_Depression_RC0', 'Co_Bipolar_RC0', 'Co_Psychosis_RC0',
-        'Co_Personalitydisorder_RC0', 'Co_Adjustmentdisorder_RC0', 'Co_Anxiety_RC0',
-        'Co_Generalizedanxiety_RC0', 'Co_OldMI_RC0', 'Co_AcuteMI_RC0', 'Co_PUD_RC0',
-        'Co_UpperGIbleed_RC0', 'Co_LowerGIbleed_RC0', 'Co_Urogenitalbleed_RC0',
-        'Co_Othbleed_RC0', 'Co_PVD_RC0', 'Co_LiverDisease_RC0', 'Co_MRI_RC0',
-        'Co_ESRD_RC0', 'Co_Obesity_RC0', 'Co_Sepsis_RC0', 'Co_Osteoarthritis_RC0',
-        'Co_RA_RC0', 'Co_NeuroPain_RC0', 'Co_NeckPain_RC0', 'Co_OthArthritis_RC0',
-        'Co_Osteoporosis_RC0', 'Co_Fibromyalgia_RC0', 'Co_Migraine_RC0', 'Co_Headache_RC0',
-        'Co_OthPain_RC0', 'Co_GeneralizedPain_RC0', 'Co_PainDisorder_RC0',
-        'Co_Falls_RC0', 'Co_CoagulationDisorder_RC0', 'Co_WhiteBloodCell_RC0', 'Co_Parkinson_RC0',
-        'Co_Anemia_RC0', 'Co_UrinaryIncontinence_RC0', 'Co_DecubitusUlcer_RC0',
-        'Co_Oxygen_RC0', 'Co_Mammography_RC0', 'Co_PapTest_RC0', 'Co_PSATest_RC0',
-        'Co_Colonoscopy_RC0', 'Co_FecalOccultTest_RC0', 'Co_FluShot_RC0', 'Co_PneumococcalVaccine_RC0' , 'Co_RenalDysfunction_RC0', 'Co_Valvular_RC0', 'Co_Hosp_Prior30Days_RC0',
-        'Co_RX_Antibiotic_RC0', 'Co_RX_Corticosteroid_RC0', 'Co_RX_Aspirin_RC0', 'Co_RX_Dipyridamole_RC0',
-        'Co_RX_Clopidogrel_RC0', 'Co_RX_Prasugrel_RC0', 'Co_RX_Cilostazol_RC0', 'Co_RX_Ticlopidine_RC0',
-        'Co_RX_Ticagrelor_RC0', 'Co_RX_OthAntiplatelet_RC0', 'Co_RX_NSAIDs_RC0',
-        'Co_RX_Opioid_RC0', 'Co_RX_Antidepressant_RC0', 'Co_RX_AAntipsychotic_RC0', 'Co_RX_TAntipsychotic_RC0',
-        'Co_RX_Anticonvulsant_RC0', 'Co_RX_PPI_RC0', 'Co_RX_H2Receptor_RC0', 'Co_RX_OthGastro_RC0',
-        'Co_RX_ACE_RC0', 'Co_RX_ARB_RC0', 'Co_RX_BBlocker_RC0', 'Co_RX_CCB_RC0', 'Co_RX_Thiazide_RC0',
-        'Co_RX_Loop_RC0', 'Co_RX_Potassium_RC0', 'Co_RX_Nitrates_RC0', 'Co_RX_Aliskiren_RC0',
-        'Co_RX_OthAntihypertensive_RC0', 'Co_RX_Antiarrhythmic_RC0', 'Co_RX_OthAnticoagulant_RC0',
-        'Co_RX_Insulin_RC0', 'Co_RX_Noninsulin_RC0', 'Co_RX_Digoxin_RC0', 'Co_RX_Statin_RC0',
-        'Co_RX_Lipid_RC0', 'Co_RX_Lithium_RC0', 'Co_RX_Benzo_RC0', 'Co_RX_ZDrugs_RC0',
-        'Co_RX_OthAnxiolytic_RC0', 'Co_RX_Dementia_RC0', 'Co_RX_Hormone_RC0',
-        'Co_RX_Osteoporosis_RC0', 'Co_N_Drugs_RC0', 'Co_N_Hosp_RC0', 'Co_Total_HospLOS_RC0',
-        'Co_N_MDVisit_RC0', 'Co_RX_AnyAspirin_RC0', 'Co_RX_AspirinMono_RC0', 'Co_RX_ClopidogrelMono_RC0',
-        'Co_RX_AspirinClopidogrel_RC0', 'Co_RX_DM_RC0', 'Co_RX_Antipsychotic_RC0'
+        'Co_CAD_R0', 'Co_Embolism_R0', 'Co_DVT_R0', 'Co_PE_R0', 'Co_AFib_R0',
+        'Co_Hypertension_R0', 'Co_Hyperlipidemia_R0', 'Co_Atherosclerosis_R0',
+        'Co_HF_R0', 'Co_HemoStroke_R0', 'Co_IscheStroke_R0', 'Co_OthStroke_R0',
+        'Co_TIA_R0', 'Co_COPD_R0', 'Co_Asthma_R0', 'Co_Pneumonia_R0', 'Co_Alcoholabuse_R0',
+        'Co_Drugabuse_R0', 'Co_Epilepsy_R0', 'Co_Cancer_R0', 'Co_MorbidObesity_R0',
+        'Co_Dementia_R0', 'Co_Depression_R0', 'Co_Bipolar_R0', 'Co_Psychosis_R0',
+        'Co_Personalitydisorder_R0', 'Co_Adjustmentdisorder_R0', 'Co_Anxiety_R0',
+        'Co_Generalizedanxiety_R0', 'Co_OldMI_R0', 'Co_AcuteMI_R0', 'Co_PUD_R0',
+        'Co_UpperGIbleed_R0', 'Co_LowerGIbleed_R0', 'Co_Urogenitalbleed_R0',
+        'Co_Othbleed_R0', 'Co_PVD_R0', 'Co_LiverDisease_R0', 'Co_MRI_R0',
+        'Co_ESRD_R0', 'Co_Obesity_R0', 'Co_Sepsis_R0', 'Co_Osteoarthritis_R0',
+        'Co_RA_R0', 'Co_NeuroPain_R0', 'Co_NeckPain_R0', 'Co_OthArthritis_R0',
+        'Co_Osteoporosis_R0', 'Co_Fibromyalgia_R0', 'Co_Migraine_R0', 'Co_Headache_R0',
+        'Co_OthPain_R0', 'Co_GeneralizedPain_R0', 'Co_PainDisorder_R0',
+        'Co_Falls_R0', 'Co_CoagulationDisorder_R0', 'Co_WhiteBloodCell_R0', 'Co_Parkinson_R0',
+        'Co_Anemia_R0', 'Co_UrinaryIncontinence_R0', 'Co_DecubitusUlcer_R0',
+        'Co_Oxygen_R0', 'Co_Mammography_R0', 'Co_PapTest_R0', 'Co_PSATest_R0',
+        'Co_Colonoscopy_R0', 'Co_FecalOccultTest_R0', 'Co_FluShot_R0', 'Co_PneumococcalVaccine_R0', 'Co_RenalDysfunction_R0', 'Co_Valvular_R0', 'Co_Hosp_Prior30Days_R0',
+        'Co_RX_Antibiotic_R0', 'Co_RX_Corticosteroid_R0', 'Co_RX_Aspirin_R0', 'Co_RX_Dipyridamole_R0',
+        'Co_RX_Clopidogrel_R0', 'Co_RX_Prasugrel_R0', 'Co_RX_Cilostazol_R0', 'Co_RX_Ticlopidine_R0',
+        'Co_RX_Ticagrelor_R0', 'Co_RX_OthAntiplatelet_R0', 'Co_RX_NSAIDs_R0',
+        'Co_RX_Opioid_R0', 'Co_RX_Antidepressant_R0', 'Co_RX_AAntipsychotic_R0', 'Co_RX_TAntipsychotic_R0',
+        'Co_RX_Anticonvulsant_R0', 'Co_RX_PPI_R0', 'Co_RX_H2Receptor_R0', 'Co_RX_OthGastro_R0',
+        'Co_RX_ACE_R0', 'Co_RX_ARB_R0', 'Co_RX_BBlocker_R0', 'Co_RX_CCB_R0', 'Co_RX_Thiazide_R0',
+        'Co_RX_Loop_R0', 'Co_RX_Potassium_R0', 'Co_RX_Nitrates_R0', 'Co_RX_Aliskiren_R0',
+        'Co_RX_OthAntihypertensive_R0', 'Co_RX_Antiarrhythmic_R0', 'Co_RX_OthAnticoagulant_R0',
+        'Co_RX_Insulin_R0', 'Co_RX_Noninsulin_R0', 'Co_RX_Digoxin_R0', 'Co_RX_Statin_R0',
+        'Co_RX_Lipid_R0', 'Co_RX_Lithium_R0', 'Co_RX_Benzo_R0', 'Co_RX_ZDrugs_R0',
+        'Co_RX_OthAnxiolytic_R0', 'Co_RX_Barbiturate_R0', 'Co_RX_Dementia_R0', 'Co_RX_Hormone_R0',
+        'Co_RX_Osteoporosis_R0', 'Co_N_Drugs_R0', 'Co_N_Hosp_R0', 'Co_Total_HospLOS_R0',
+        'Co_N_MDVisit_R0', 'Co_RX_AnyAspirin_R0', 'Co_RX_AspirinMono_R0', 'Co_RX_ClopidogrelMono_R0',
+        'Co_RX_AspirinClopidogrel_R0', 'Co_RX_DM_R0', 'Co_RX_Antipsychotic_R0'
 ]
+
 co_train_gpop = train_set[predictor_variable]
     
 co_train_high = train_set_high[predictor_variable]
@@ -139,12 +140,12 @@ def scores(X,y):
 
     pred = best_clf.predict(X)
     actual = y
-    #file = open('hem_smote_rf_ehrc.out', 'a')
-    print(accuracy_score(actual,pred),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(f1_score(actual,pred),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(fbeta_score(actual,pred, average = 'macro', beta = 2),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(roc_auc_score(actual, best_clf.predict_proba(X)[:,1]),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(log_loss(actual,best_clf.predict_proba(X)[:,1]),file = open('hem_smote_rf_ehrc.out', 'a'))
+    #file = open('hem_smote_rf_ehr.out', 'a')
+    print(accuracy_score(actual,pred),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(f1_score(actual,pred),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(fbeta_score(actual,pred, average = 'macro', beta = 2),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(roc_auc_score(actual, best_clf.predict_proba(X)[:,1]),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(log_loss(actual,best_clf.predict_proba(X)[:,1]),file = open('hem_smote_rf_ehr.out', 'a'))
 
 
 # In[10]:
@@ -179,11 +180,11 @@ def cross_val(X,y,Or_X, Or_y):
         accuracy.append(sklearn.metrics.accuracy_score(y_test, pred))
         f1.append(sklearn.metrics.f1_score(y_test, pred, average = 'macro'))
         f2.append(fbeta_score(y_test,pred, average = 'macro', beta = 2))
-    print(np.mean(accuracy),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(np.mean(f1),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(np.mean(f2),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(np.mean(auc),file = open('hem_smote_rf_ehrc.out', 'a'))
-    print(np.mean(log_loss),file = open('hem_smote_rf_ehrc.out', 'a'))
+    print(np.mean(accuracy),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(np.mean(f1),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(np.mean(f2),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(np.mean(auc),file = open('hem_smote_rf_ehr.out', 'a'))
+    print(np.mean(log_loss),file = open('hem_smote_rf_ehr.out', 'a'))
 #co_train_gpop_sm,out_train_hemorrhage_gpop_sm, co_validation_gpop_split, out_validation_hemorrhage_gpop_split
 
 
@@ -192,7 +193,7 @@ def cross_val(X,y,Or_X, Or_y):
 # In[11]:
 
 
-print("Gpop",file = open('hem_smote_rf_ehrc.out', 'a'))
+print("Gpop",file = open('hem_smote_rf_ehr.out', 'a'))
 
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
@@ -205,14 +206,14 @@ best_clf = rf(co_train_gpop_sm, out_train_hemorrhage_gpop_sm)
 
 
 cross_val(co_train_gpop_sm, out_train_hemorrhage_gpop_sm, co_validation_gpop_split, out_validation_hemorrhage_gpop_split)
-#, file = open('hem_smote_rf_ehrc.out', 'a')
+#, file = open('hem_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_gpop, out_train_hemorrhage_gpop)
-#, file = open('hem_smote_rf_ehrc.out', 'a')
+#, file = open('hem_smote_rf_ehr.out', 'a')
 print("")
 
-print("",file = open('hem_smote_rf_ehrc.out', 'a'))
+print("",file = open('hem_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_gpop, out_validation_hemorrhage_gpop)
 
@@ -223,7 +224,7 @@ scores(co_validation_gpop, out_validation_hemorrhage_gpop)
 
 
 
-print("Low",file = open('hem_smote_rf_ehrc.out', 'a'))
+print("Low",file = open('hem_smote_rf_ehr.out', 'a'))
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
 co_train_low_sm,out_train_hemorrhage_low_sm = sm.fit_resample(co_train_low,out_train_hemorrhage_low)
@@ -231,15 +232,15 @@ co_train_low_sm,out_train_hemorrhage_low_sm = sm.fit_resample(co_train_low,out_t
 best_clf = rf(co_train_low_sm, out_train_hemorrhage_low_sm)
 
 cross_val(co_train_low_sm, out_train_hemorrhage_low_sm, co_validation_low_split, out_validation_hemorrhage_low_split)
-#, file = open('hem_smote_rf_ehrc.out', 'a')
+#, file = open('hem_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_low, out_train_hemorrhage_low)
 
-#, file = open('hem_smote_rf_ehrc.out', 'a')
+#, file = open('hem_smote_rf_ehr.out', 'a')
 print("")
 
-print("",file = open('hem_smote_rf_ehrc.out', 'a'))
+print("",file = open('hem_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_low, out_validation_hemorrhage_low)
 
@@ -249,7 +250,7 @@ scores(co_validation_low, out_validation_hemorrhage_low)
 # In[14]:
 
 
-print("High",file = open('hem_smote_rf_ehrc.out', 'a'))
+print("High",file = open('hem_smote_rf_ehr.out', 'a'))
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
 co_train_high_sm,out_train_hemorrhage_high_sm = sm.fit_resample(co_train_high,out_train_hemorrhage_high)
@@ -257,12 +258,12 @@ co_train_high_sm,out_train_hemorrhage_high_sm = sm.fit_resample(co_train_high,ou
 best_clf = rf(co_train_high_sm, out_train_hemorrhage_high_sm)
 
 cross_val(co_train_high_sm, out_train_hemorrhage_high_sm, co_validation_high_split, out_validation_hemorrhage_high_split)
-#, file = open('hem_smote_rf_ehrc.out', 'a')
+#, file = open('hem_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_high, out_train_hemorrhage_high)
-#, file = open('hem_smote_rf_ehrc.out', 'a')
-print("",file = open('hem_smote_rf_ehrc.out', 'a'))
+#, file = open('hem_smote_rf_ehr.out', 'a')
+print("",file = open('hem_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_high, out_validation_hemorrhage_high)
 

@@ -27,7 +27,7 @@ validation_set_low = validation_set[validation_set.Cal_MPEC_R0 < fifty_perc_EHR_
 
 
 predictor_variable = [
-'Co_CAD_RC0', 'Co_Embolism_RC0', 'Co_DVT_RC0', 'Co_PE_RC0', 'Co_AFib_RC0',
+ 'Co_CAD_RC0', 'Co_Embolism_RC0', 'Co_DVT_RC0', 'Co_PE_RC0', 'Co_AFib_RC0',
         'Co_Hypertension_RC0', 'Co_Hyperlipidemia_RC0', 'Co_Atherosclerosis_RC0',
         'Co_HF_RC0', 'Co_HemoStroke_RC0', 'Co_IscheStroke_RC0', 'Co_OthStroke_RC0',
         'Co_TIA_RC0', 'Co_COPD_RC0', 'Co_Asthma_RC0', 'Co_Pneumonia_RC0', 'Co_Alcoholabuse_RC0',
@@ -148,12 +148,12 @@ def scores(X,y):
 
     pred = best_clf.predict(X)
     actual = y
-    #file = open('comp_nd_smote_rf_ehrc.out', 'a')
-    print(accuracy_score(actual,pred),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(f1_score(actual,pred),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(fbeta_score(actual,pred, average = 'macro', beta = 2),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(roc_auc_score(actual, best_clf.predict_proba(X)[:,1]),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(log_loss(actual,best_clf.predict_proba(X)[:,1]),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+    #file = open('comp_nd_smote_rf_ehr.out', 'a')
+    print(accuracy_score(actual,pred),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(f1_score(actual,pred),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(fbeta_score(actual,pred, average = 'macro', beta = 2),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(roc_auc_score(actual, best_clf.predict_proba(X)[:,1]),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(log_loss(actual,best_clf.predict_proba(X)[:,1]),file = open('comp_nd_smote_rf_ehr.out', 'a'))
 
 
 # In[10]:
@@ -188,11 +188,11 @@ def cross_val(X,y,Or_X, Or_y):
         accuracy.append(sklearn.metrics.accuracy_score(y_test, pred))
         f1.append(sklearn.metrics.f1_score(y_test, pred, average = 'macro'))
         f2.append(fbeta_score(y_test,pred, average = 'macro', beta = 2))
-    print(np.mean(accuracy),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(np.mean(f1),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(np.mean(f2),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(np.mean(auc),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
-    print(np.mean(log_loss),file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+    print(np.mean(accuracy),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(np.mean(f1),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(np.mean(f2),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(np.mean(auc),file = open('comp_nd_smote_rf_ehr.out', 'a'))
+    print(np.mean(log_loss),file = open('comp_nd_smote_rf_ehr.out', 'a'))
 #co_train_gpop_sm,out_train_comp_gpop_sm, co_validation_gpop_split, out_validation_comp_gpop_split
 
 
@@ -201,7 +201,7 @@ def cross_val(X,y,Or_X, Or_y):
 # In[11]:
 
 
-print("Gpop",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+print("Gpop",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
@@ -214,14 +214,14 @@ best_clf = rf(co_train_gpop_sm, out_train_comp_gpop_sm)
 
 
 cross_val(co_train_gpop_sm, out_train_comp_gpop_sm, co_validation_gpop_split, out_validation_comp_gpop_split)
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_gpop, out_train_comp_gpop)
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
 print("")
 
-print("",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+print("",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_gpop, out_validation_comp_gpop)
 
@@ -232,7 +232,7 @@ scores(co_validation_gpop, out_validation_comp_gpop)
 
 
 
-print("Low",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+print("Low",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
 co_train_low_sm,out_train_comp_low_sm = sm.fit_resample(co_train_low,out_train_comp_low)
@@ -240,15 +240,15 @@ co_train_low_sm,out_train_comp_low_sm = sm.fit_resample(co_train_low,out_train_c
 best_clf = rf(co_train_low_sm, out_train_comp_low_sm)
 
 cross_val(co_train_low_sm, out_train_comp_low_sm, co_validation_low_split, out_validation_comp_low_split)
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_low, out_train_comp_low)
 
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
 print("")
 
-print("",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+print("",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_low, out_validation_comp_low)
 
@@ -258,7 +258,7 @@ scores(co_validation_low, out_validation_comp_low)
 # In[14]:
 
 
-print("High",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+print("High",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 from imblearn.over_sampling import SMOTE
 sm = SMOTE(random_state = 42)
 co_train_high_sm,out_train_comp_high_sm = sm.fit_resample(co_train_high,out_train_comp_high)
@@ -266,12 +266,12 @@ co_train_high_sm,out_train_comp_high_sm = sm.fit_resample(co_train_high,out_trai
 best_clf = rf(co_train_high_sm, out_train_comp_high_sm)
 
 cross_val(co_train_high_sm, out_train_comp_high_sm, co_validation_high_split, out_validation_comp_high_split)
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
 print("")
 
 #scores(co_train_high, out_train_comp_high)
-#, file = open('comp_nd_smote_rf_ehrc.out', 'a')
-print("",file = open('comp_nd_smote_rf_ehrc.out', 'a'))
+#, file = open('comp_nd_smote_rf_ehr.out', 'a')
+print("",file = open('comp_nd_smote_rf_ehr.out', 'a'))
 
 scores(co_validation_high, out_validation_comp_high)
 
